@@ -3,6 +3,7 @@
 (define lista-set
   (lambda(l n x c)
     (cond
+      [(null? l) (eopl:error)]
       [(= n 0)(append(list x) l)]
       [(= n c)(append(list x)(cdr l))]
       [else(append(list (car l))
