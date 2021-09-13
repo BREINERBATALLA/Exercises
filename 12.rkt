@@ -3,6 +3,7 @@
   (define lista
     (lambda(a b)
       (cond
+        [(> a b) "error"]
         [(= a b)(cons a empty)]
         [else(cons a(lista (+ a 1) b ))])))
         
